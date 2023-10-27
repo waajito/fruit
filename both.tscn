@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyxubo0634g46"]
+
+[ext_resource type="PackedScene" uid="uid://bmp5q84p1wvd1" path="res://Main.tscn" id="1_15d21"]
+[ext_resource type="PackedScene" uid="uid://wp1jgra0m3et" path="res://UI.tscn" id="2_t8gtw"]
+
+[node name="Node" type="Node"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_15d21")]
+
+[node name="Control" parent="." instance=ExtResource("2_t8gtw")]
+offset_left = -540.0
+offset_top = -323.0
+offset_right = -540.0
+offset_bottom = -323.0

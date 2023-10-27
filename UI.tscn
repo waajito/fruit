@@ -1,0 +1,204 @@
+[gd_scene load_steps=8 format=3 uid="uid://wp1jgra0m3et"]
+
+[ext_resource type="Texture2D" uid="uid://di6sd5d8h7gp4" path="res://STAR.svg" id="1_b22mr"]
+[ext_resource type="Script" path="res://UI.gd" id="1_cd5y5"]
+
+[sub_resource type="Theme" id="Theme_vs56y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lgfn7"]
+bg_color = Color(1, 0.313726, 0.32549, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_offset = Vector2(8, 8)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ohg85"]
+bg_color = Color(0.309804, 0.458824, 1, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_offset = Vector2(8, 8)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7pit4"]
+bg_color = Color(1, 0.72549, 0.309804, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_offset = Vector2(8, 8)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7dot"]
+bg_color = Color(0.890196, 0.619608, 0.301961, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.207843, 0.113725, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cd5y5")
+
+[node name="increase_size" type="Panel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -49.5
+offset_bottom = 49.5
+grow_horizontal = 0
+grow_vertical = 2
+theme = SubResource("Theme_vs56y")
+theme_override_styles/panel = SubResource("StyleBoxFlat_lgfn7")
+
+[node name="Label" type="Label" parent="increase_size"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 34
+text = "big"
+
+[node name="decrease_size" type="Panel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = -1.0
+offset_right = 160.0
+offset_bottom = 98.0
+theme = SubResource("Theme_vs56y")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ohg85")
+
+[node name="Label" type="Label" parent="decrease_size"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 34
+text = "small
+"
+
+[node name="score_board" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -389.0
+offset_top = 26.0
+offset_right = -23.0
+offset_bottom = 125.0
+grow_horizontal = 0
+theme = SubResource("Theme_vs56y")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7pit4")
+
+[node name="star" type="TextureRect" parent="score_board"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 28.0
+offset_top = -20.5
+offset_right = 68.0
+offset_bottom = 19.5
+grow_vertical = 2
+texture = ExtResource("1_b22mr")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="score_board"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.276
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -9.01601
+offset_top = -26.5
+offset_right = -141.0
+offset_bottom = 26.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 34
+text = "Score : "
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="score_board"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.276
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 118.984
+offset_top = -23.5
+offset_right = -18.0
+offset_bottom = 26.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 34
+text = "0"
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -48.0
+offset_right = 104.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_x7dot")
+text = "Press"
+
+[connection signal="mouse_entered" from="increase_size" to="." method="_on_increase_size_mouse_entered"]
+[connection signal="mouse_entered" from="decrease_size" to="." method="_on_decrease_size_mouse_entered"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed" flags=18]
