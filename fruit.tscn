@@ -5,9 +5,8 @@
 [ext_resource type="Script" path="res://explosion.gd" id="3_p7pj7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_homer"]
-friction = 0.5
-rough = true
-bounce = 0.02
+friction = 0.7
+bounce = 0.05
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1vo6q"]
 resource_local_to_scene = true
@@ -20,7 +19,7 @@ radius = 64.7765
 [node name="fruit" type="RigidBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_homer")
 gravity_scale = 2.8
-max_contacts_reported = 2
+max_contacts_reported = 6
 contact_monitor = true
 script = ExtResource("1_l0o7y")
 
@@ -41,4 +40,4 @@ unique_name_in_owner = true
 shape = SubResource("CircleShape2D_1xex8")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="test" from="." to="Area2D" method="_on_fruit_test"]
+[connection signal="on_merge" from="." to="Area2D" method="_on_merge_explosion"]
