@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://biagggwlwt20g"]
 
 [ext_resource type="Script" path="res://fruit.gd" id="1_l0o7y"]
-[ext_resource type="Texture2D" uid="uid://ckp122n4x7knc" path="res://sprites/ball 02.svg" id="2_72kqe"]
+[ext_resource type="Texture2D" uid="uid://c6xwsjvkbmg4m" path="res://sprites/faces/face_blowing_a_kiss_3d.png" id="2_amoaf"]
 [ext_resource type="Script" path="res://explosion.gd" id="3_p7pj7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_homer"]
@@ -25,7 +25,8 @@ script = ExtResource("1_l0o7y")
 
 [node name="fruit_sprite" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-texture = ExtResource("2_72kqe")
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("2_amoaf")
 
 [node name="fruit_collider" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true

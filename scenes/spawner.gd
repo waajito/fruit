@@ -28,7 +28,7 @@ func _process(delta):
 	
 	
 func _input(event):
-	if event.is_action_pressed("drop"):
+	if event.is_action_released("drop"):
 		showPeice.freeze = false
 		await get_tree().create_timer(0.5).timeout
 		spawn()
