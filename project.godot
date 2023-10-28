@@ -14,17 +14,17 @@ config/name="Fruits"
 config/description="This is a simple fruit game"
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
-boot_splash/image="res://STAR.svg"
+boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
+boot_splash/image="res://sprites/faces/face_savoring_food_3d.png"
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=648
-window/size/viewport_height=1152
+window/size/viewport_width=1080
+window/size/viewport_height=1920
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_width"
-window/handheld/orientation=5
-window/vsync/vsync_mode=2
+window/handheld/orientation=1
 
 [input]
 
