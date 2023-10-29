@@ -18,7 +18,6 @@ radius = 64.7765
 
 [node name="fruit" type="RigidBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_homer")
-gravity_scale = 2.8
 continuous_cd = 1
 max_contacts_reported = 4
 contact_monitor = true

@@ -49,6 +49,10 @@ drop={
 ]
 }
 
+[physics]
+
+2d/default_gravity_vector=Vector2(2.08165e-12, 2.8)
+
 [rendering]
 
 renderer/rendering_method="mobile"

@@ -117,4 +117,11 @@ grow_vertical = 2
 texture = ExtResource("5_v32j6")
 expand_mode = 1
 
+[node name="fps_counter" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.760784, 0.00784314, 0.333333, 1)
+theme_override_font_sizes/font_size = 60
+
 [connection signal="on_spawn" from="Spawner" to="CanvasLayer/Control" method="_on_spawn"]
