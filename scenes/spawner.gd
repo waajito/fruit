@@ -5,7 +5,7 @@ var fruit = preload("res://fruit.tscn")
 
 @onready var fruit_idx = randi() % 4
 signal on_spawn(idx : int)
-
+var isSpawning : bool = true;
 
 func _ready():
 	showPeice.freeze = true
@@ -23,6 +23,7 @@ func spawn():
 	showPeice.freeze = true
 	add_child(showPeice)
 	get_next_fruit()
+	isSpawning = true
 	
 func get_next_fruit():
 	fruit_idx = randi() % 3
@@ -38,11 +39,13 @@ func _process(delta):
 	
 	
 func _input(event):
-	if event.is_action_released("drop"):
+	if event.is_action_released("drop") and isSpawning:
+		isSpawning = false
 		showPeice.freeze = false
 		var wait_time = fruit_idx * 0.5
 		wait_time = maxf(wait_time, 0.5)
 		await get_tree().create_timer(wait_time).timeout
+		
 		spawn()
 		
 	
