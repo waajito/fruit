@@ -10,8 +10,4 @@ func ChangeIcon(texture) :
 func _on_spawn(idx):
 	ChangeIcon(images[idx])
 
-func _ready():
-	
 
-func _process(delta):
-	$fps_counter.text = str(Engine.get_frames_per_second())
